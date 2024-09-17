@@ -1,0 +1,20 @@
+-- Tedarikçi ID'si 1, 2, 3, 4 veya 5 olan ürünleri listeleyin. 
+-- SELECT * FROM Products WHERE SupplierID IN (1, 2, 3, 4, 5)
+-- Tedarikçi ID'si 1, 2, 4 veya 5 olan ürünleri listeleyin.
+-- SELECT * FROM Products WHERE SupplierID IN (1, 2, 4, 5)
+-- Ürün adı 'Chang' veya 'Aniseed Syrup' olan ürünleri listeleyin.
+-- SELECT * FROM Products WHERE ProductName IN ('Chang', 'Aniseed Syrup')
+-- Tedarikçi ID'si 3 olan veya birim fiyatı 10'dan büyük olan ürünleri listeleyin.
+-- SELECT * FROM Products WHERE supplierid  = 3 or unitprice > 10
+-- Ürün adı ve birim fiyatını içeren listeyi getirin.
+-- SELECT ProductName || ' - ' || UnitPrice FROM Products
+--Ürün adlarını büyük harfe dönüştürdükten sonra 'c' harfi içeren ürünleri listeleyin. (örneğin: 'Chai', 'Chocolate', vs.)
+--SELECT productname FROM PRODUCTS WHERE UPPER(productname) LIKE '%C%'
+-- Ürün adı 'n' harfi ile başlayan ve içerisinde tek karakterli bir harf içeren ürünleri listeleyin. (örneğin: 'Naai, 'Nectar', vs.)
+--SELECT productname FROM PRODUCTS WHERE productname LIKE 'N%'AND NOT productname LIKE '%N%'
+-- Stok miktarı 50'den fazla olan ürünleri listeleyin.
+-- SELECT * FROM Products WHERE unitsinstock > 50
+-- En yüksek ve en düşük birim fiyatına sahip ürünleri listeleyin.
+-- SELECT * FROM Products WHERE UnitPrice = (SELECT MAX(UnitPrice) FROM Products) OR UnitPrice = (SELECT MIN(UnitPrice) FROM Products)
+-- Ürün adında 'Spice' kelimesi geçen ürünleri listeleyin.
+-- SELECT * FROM Products WHERE ProductName LIKE '%Spice%'
